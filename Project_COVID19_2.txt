@@ -1,0 +1,48 @@
+library(tidyverse)
+covid_final1=covid19_final%>%
+  mutate(weighted_hdi=as.numeric(hdi)/as.numeric(hdi_country))
+
+covid_final2=covid_final1%>%
+  mutate(health_expense=as.numeric(population)*as.numeric(amt_health_per_person)*as.numeric(weighted_hdi))
+
+covid_final2=covid_final2%>%
+  mutate(urban_pop=((as.numeric(population)*as.numeric(percent_of_urban_pop))/100)*as.numeric(weighted_hdi))
+
+covid_final2=covid_final2%>%
+     mutate(life_expectancy=as.numeric(avg_life_expectancy)*as.numeric(weighted_hdi))
+
+           
+covid_final2=covid_final2%>%
+  mutate(infant_mortality=as.numeric(infant_mortality_per_thousands)*as.numeric(weighted_hdi))
+
+covid_final2=covid_final2%>%
+  mutate(clean_water_urban=as.numeric(urban_pop)*(as.numeric(percent_pop_using_drinkable_water_urban)/100)*as.numeric(weighted_hdi))
+
+covid_final2=covid_final2%>%
+  mutate(rural_pop=as.double(population)-as.numeric(urban_pop))
+
+covid_final2=covid_final2%>%
+  mutate(clean_water_rural=as.numeric(rural_pop)*(as.numeric(percent_pop_using_drinkable_water_rural)/100)*as.numeric(weighted_hdi))
+
+covid_final2=covid_final2%>%
+  mutate(clean_water_access=as.numeric(clean_water_urban)+as.numeric(clean_water_rural))
+
+colnames(covid_final2)
+covid_final3=covid_final2[,c(1,2,3,6,7,16,17,18,19,23)]
+
+covid_final3=covid_final3%>%
+  mutate(clean_water_access=as.integer(clean_water_access))
+
+covid_final3=covid_final3%>%
+  mutate(life_expectancy=round(life_expectancy,3))
+
+covid_final3=covid_final3%>%
+  mutate(urban_pop=as.integer(urban_pop))
+
+covid_final3=covid_final3%>%
+  mutate(population_density=round(population_density,3))
+
+covid_final4=covid_final3%>%
+  select(province_name,country,hdi,population_density,urban_pop,clean_water_access,health_expense,life_expectancy,infant_mortality,confirmed)
+
+write.csv(covid_final4,'G:/DataAnalytics/Data/COVID_19_analysis_data.csv', row.names = F)

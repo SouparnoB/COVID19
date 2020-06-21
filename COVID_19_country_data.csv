@@ -1,0 +1,8 @@
+country,percent_of_urban_pop,infant_mortality_per_thousands,percent_pop_using_drinkable_water_urban,percent_pop_using_drinkable_water_rural,avg_life_expectancy,amt_health_per_person,hdi_country
+Australia,89.4,3.9,100,100,82.3,4731.943315,0.938
+China,55.6,11.6,86.6,63.7,75.7,435.4081114,0.758
+Germany,75.3,3.4,99.3,99,80.4,4628.769759,0.939
+Iceland,94.1,1.6,98.7,100,82.2,4457.970149,0.935
+India,32.7,41.3,62.6,28.5,67.65,74.27174316,0.647
+Italy,69,3,99.5,99.6,82.3,2823.203504,0.883
+Spain,79.6,2.9,99.8,100,82.45,2316.217586,0.893

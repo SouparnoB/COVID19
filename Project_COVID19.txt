@@ -1,0 +1,45 @@
+library(tidyverse)
+
+covid_data=X05_16_2020
+
+str(covid_data)
+
+covid_data=covid_data[,-c(1)]
+covid_data=covid_data[,-c(1,4:6,8:11)]
+
+any(is.na(covid_data))
+is.na(covid_data)
+any(is.na(covid_data$Province_State))
+any(is.na(covid_data$Confirmed))
+
+covid_data=group_by(covid_data,Province_State,Country_Region,add=TRUE)
+covid_data=summarise(covid_data,confirmed=sum(Confirmed))
+
+covid_data_1=subset(covid_data,
+                    Country_Region=='Italy'|
+                      Country_Region=='Spain'|
+                      Country_Region=='Australia'|
+                      Country_Region=='China'|
+                      Country_Region=='Iceland'|
+                      Country_Region=='Germany')
+
+write.csv(covid_data_1,'G:/DataAnalytics/Data/covid19.csv', row.names = F)
+
+
+country_data1=subset(country_profile_variables,
+                    country=='Italy'|
+                      country=='Spain'|
+                      country=='Australia'|
+                      country=='China'|
+                      country=='Iceland'|
+                      country=='Germany'|
+                      country=='India')
+
+colnames(country_data1)
+country_data=country_data1[,c(1,4,7,25,28,32,33,48)]
+
+#country_data%>% 
+ # separate(`Life expectancy at birth (females/males, years)',c('Life_Expectancy_Male','Life_Expectancy_Female'))%>%
+#  mutate(Average_Life_Expectancy=mean('Life_Expectancy_Male','Life_Expectancy_Female'))
+
+names(country_data)[1]="Pop_in_thousands"

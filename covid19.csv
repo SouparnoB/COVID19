@@ -1,0 +1,100 @@
+province_name,country_region,confirmed,hdi
+Iceland,Iceland,1802,0.935
+Abruzzo,Italy,3178,0.884
+Andalusia,Spain,12420,0.862
+Anhui,China,991,0.724
+Aragon,Spain,5456,0.898
+Asturias,Spain,2366,0.887
+Australian Capital Territory,Australia,107,0.971
+Baden-Wurttemberg,Germany,33912,0.953
+Baleares,Spain,1982,0.862
+Aosta Valley,Italy,1173,
+Bayern,Germany,45665,0.947
+Beijing,China,593,0.894
+Berlin,Germany,6443,0.95
+Brandenburg,Germany,3197,0.914
+Bremen,Germany,1167,0.951
+Valencia,Spain,10850,0.882
+Basilicata,Italy,390,0.853
+Calabria,Italy,1151,0.842
+Canary Islands,Spain,2284,0.921
+Cantabria,Spain,2265,0.961
+Castilla -La Mancha,Spain,16587,0.859
+Castilla y Leon,Spain,18369,0.894
+Catalonia,Spain,55685,0.906
+Ceuta,Spain,116,0.847
+Chongqing,China,579,0.759
+Campania,Italy,4668,0.845
+Extremadura,Spain,2958,0.853
+Emilia-Romagna,Italy,27182,0.91
+Fujian,China,356,0.764
+Galicia,Spain,9041,0.886
+Gansu,China,139,0.691
+Guangdong,China,1590,0.791
+Guangxi,China,254,0.726
+Guizhou,China,147,0.68
+Hainan,China,169,0.75
+Hamburg,Germany,5031,0.975
+Hebei,China,328,0.737
+Heilongjiang,China,945,0.747
+Henan,China,1276,0.732
+Hessen,Germany,9261,0.949
+Hong Kong,China,1052,0.939
+Hubei,China,68134,0.762
+Hunan,China,1019,0.751
+Inner Mongolia,China,209,0.774
+Jiangsu,China,653,0.802
+Jiangxi,China,937,0.727
+Jilin,China,144,0.767
+La Rioja,Spain,4020,0.902
+Friuli-Venezia Giulia,Italy,3183,0.895
+Liaoning,China,149,0.777
+Lazio,Italy,7396,0.904
+Liguria,Italy,9111,0.89
+Macau,China,45,0.909
+Madrid,Spain,66210,0.928
+Lombardia,Italy,84518,0.902
+Mecklenburg-Vorpommern,Germany,750,0.91
+Melilla,Spain,119,0.841
+Marche,Italy,6642,0.893
+Murcia,Spain,1542,0.873
+Navarra,Spain,5137,0.913
+New South Wales,Australia,3075,0.939
+Lower Saxony,Germany,11147,0.922
+Ningxia,China,75,0.745
+Nordrhein-Westfalen,Germany,36134,0.936
+Northern Territory,Australia,29,0.926
+Molise,Italy,410,0.863
+P.A. Bolzano,Italy,2578,0.883
+Basque,Spain,13291,
+P.A. Trento,Italy,4326,0.883
+Piemonte,Italy,29483,0.888
+Qinghai,China,18,0.686
+Queensland,Australia,1055,0.932
+Rheinland-Pfalz,Germany,6449,0.928
+Saarland,Germany,2708,0.931
+Sachsen,Germany,5110,0.93
+Sachsen-Anhalt,Germany,1676,0.908
+Puglia,Italy,4374,
+Schleswig-Holstein,Germany,2998,0.92
+Shaanxi,China,308,0.756
+Shandong,China,788,0.765
+Shanghai,China,665,0.867
+Shanxi,China,198,0.75
+Sichuan,China,561,0.716
+Sardegna,Italy,1352,0.858
+South Australia,Australia,439,0.926
+Tasmania,Australia,228,0.907
+Thuringen,Germany,2711,0.921
+Tianjin,China,192,0.85
+Tibet,China,1,0.585
+Sicilia,Italy,3382,0.838
+Toscana,Italy,9913,0.9
+Unknown,Germany,1393,
+Umbria,Italy,1422,0.884
+Veneto,Italy,18928,0.892
+Victoria,Australia,1558,0.936
+Western Australia,Australia,553,0.953
+Xinjiang,China,76,0.731
+Yunnan,China,185,0.672
+Zhejiang,China,1268,0.789

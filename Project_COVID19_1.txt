@@ -1,0 +1,38 @@
+library(tidyverse)
+country_data1=subset(country_profile_variables,
+                     country=='Italy'|
+                       country=='Spain'|
+                       country=='Australia'|
+                       country=='China'|
+                       country=='Iceland'|
+                       country=='Germany'|
+                       country=='India')
+
+colnames(country_data1)
+country_data=country_data1[,c(1,4,7,25,28,32,33,48)]
+
+names(country_data)[2]="pop_in_thousands"
+names(country_data)[3]="gdp_in_million_dollars"
+names(country_data)[4]="percent_of_urban_pop"
+names(country_data)[5]="life_expectancy_female_male"
+names(country_data)[6]="infant_mortality_per_thousands"
+names(country_data)[7]="percent_gdp_in_health"
+names(country_data)[8]="percent_pop_using_drinkable_water_urban_rural"
+
+country_data=country_data%>%
+  separate(life_expectancy_female_male,c("life_expectancy_female","life_expectancy_male"),sep='/')%>%
+  separate(percent_pop_using_drinkable_water_urban_rural,c("percent_pop_using_drinkable_water_urban","percent_pop_using_drinkable_water_rural"),sep='/')
+
+country_data=country_data%>%
+  mutate(avg_life_expectancy=(as.numeric(life_expectancy_female)+as.numeric(life_expectancy_male))/2)
+  
+country_data=country_data%>%
+  mutate(amt_health_million_dollars=(as.numeric(percent_gdp_in_health)*as.numeric(gdp_in_million_dollars))/100)
+
+country_data=country_data%>%
+  mutate(amt_health_per_person=(as.numeric(amt_health_million_dollars)*1000000)/(as.numeric(pop_in_thousands)*1000))
+
+country_data2=country_data[,c(1,4,7,9,10,11,13)]
+
+#saving the csv files
+write.csv(country_data2,'G:/DataAnalytics/Data/COVID_19_country_data.csv', row.names = F)
